@@ -1,0 +1,35 @@
+
+## get all products
+get http://localhost:3000/products/
+Accept:  "application/json"
+Content-Type: "application/json"
+
+
+### get product by id
+get http://localhost:3000/products/1
+Accept:  "application/json"
+Content-Type: "application/json"
+
+
+### get all products with category
+get http://localhost:3000/products/category/technology
+Accept:  "application/json"
+
+
+### create a new product
+post http://localhost:3000/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTgyOTk3NCwiZXhwIjoxNjU5OTE2Mzc0fQ.fXTlRm4StxqTH0eTHO5hdQrnPBrw-nfj045MpbIfLiQ
+
+{
+  "name": "product 55",
+  "price": 200,
+  "category": "Health",
+  "description": "this is product 55"
+}
+
+
+### top Five products
+get http://localhost:3000/products/mostpopular
+Accept:  "application/json"
+Content-Type: "application/json"

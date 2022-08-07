@@ -1,0 +1,36 @@
+### get order by userId
+get http://localhost/orders/9
+Accept: application/json
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTkxMzAxNywiZXhwIjoxNjU5OTk5NDE3fQ.9IzNdTaL_pIUAMZIVlXwbfL7qc245llQ9LcuQAywNwI
+
+
+### get complated order by userId
+
+get http://localhost/orders/9/completed
+Accept: application/json
+content-type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTkxMzAxNywiZXhwIjoxNjU5OTk5NDE3fQ.9IzNdTaL_pIUAMZIVlXwbfL7qc245llQ9LcuQAywNwI
+
+### create order 
+post http://localhost/orders/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTkxMzAxNywiZXhwIjoxNjU5OTk5NDE3fQ.9IzNdTaL_pIUAMZIVlXwbfL7qc245llQ9LcuQAywNwI
+content-type: application/json
+Accept: application/json
+
+{
+    "user_id": 9,
+    "product_id": 1,
+    "quantity": 1
+}
+
+####
+put http://localhost/orders/9/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTkxMzAxNywiZXhwIjoxNjU5OTk5NDE3fQ.9IzNdTaL_pIUAMZIVlXwbfL7qc245llQ9LcuQAywNwI
+content-type: application/json
+Accept: application/json
+
+{
+  "status": "preapred",
+  "quantity": 2
+}

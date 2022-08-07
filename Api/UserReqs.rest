@@ -1,0 +1,35 @@
+
+
+get http://localhost:3000/
+
+### get all users
+get http://localhost:3000/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTM5MDg3MiwiZXhwIjoxNjU5NDc3MjcyfQ.Q3cEnevYRnPxMqyxrzdKRnc3MjnAGL3IqOzdE5DFflY
+
+
+### get all user with id 1
+get http://localhost:3000/users/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImlhdCI6MTY1OTM5MTM4NywiZXhwIjoxNjU5NDc3Nzg3fQ.BPY9MYZLUhInN7iKCJbXnpJLanGH2PS6M6R-oJ8D5Ac
+
+### create a new user
+post http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "fristName": "malek",
+  "lastName": "Radwan",
+  "email": "malek1@gmail.com",
+  "password": "123456"
+}
+
+
+### login a user with email and password to get token
+post http://localhost/users/login
+Content-Type: application/json
+
+{
+  "email": "malek1@gmail.com",
+  "password": "123456"
+}
+
+
